@@ -1,5 +1,8 @@
-import type { TaskProps } from '../types/Types';
+import type { TaskProps } from '../types/Types'; // TaskProps interface import
 
+// HTML structure for a task, receive a task and two functions.
+// It is a list item to display task information and manipulate it,
+// such as checking and deleting it
 export default function Task({ task, onToggle, onDelete }: TaskProps) {
   return (
     <li key={task.id}>
