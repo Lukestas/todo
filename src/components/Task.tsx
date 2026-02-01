@@ -5,7 +5,7 @@ import type { TaskProps } from '../types/Types'; // TaskProps interface import
 // such as checking and deleting it
 export default function Task({ task, onToggle, onDelete }: TaskProps) {
   return (
-    <li key={task.id}>
+    <li>
       <label className={task.completed ? 'isChecked' : ''}>
         <input
           type='checkbox'

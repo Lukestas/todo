@@ -16,7 +16,7 @@ body {
   --text-primary: rgb(255, 255, 255);
   --text-muted: rgb(72, 101, 131);
   --background: #101922;
-  --card-background: #1C2632;
+  --card-background: #1c2632;
   --border: rgb(50 77 103);
   --list-background: #2a3a49;
   --button-delete: rgb(235, 99, 89);
@@ -26,7 +26,6 @@ body {
 }
 
 main {
-
   h1 {
     color: var(--text-primary);
   }
@@ -44,7 +43,7 @@ main {
     form {
       display: flex;
       justify-content: space-between;
-      padding: 1rem;
+      padding: 1rem 1rem 0 1rem;
       gap: 10px;
 
       input {
@@ -78,9 +77,42 @@ main {
         }
       }
     }
+    .pagination {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0.5rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+      button {
+        cursor: pointer;
+        background-color: transparent;
+        border: 1px solid var(--border);
+        text-decoration: none;
+        padding: 0.5rem;
+        color: var(--text-primary);
+        border-radius: 10px;
+        &:hover {
+          transition-duration: 1s;
+          background-color: var(--button-background);
+        }
+        &.isActive {
+          cursor: default;
+          background-color: var(--button-add);
+        }
+        &.isFirstOrLastPage {
+          opacity: 0.5;
+          pointer-events: none;
+        }
+      }
+    }
 
-    ul {
+    .taskList {
       background-color: var(--list-background);
+      p {
+        color: var(--text-muted);
+        padding: 1rem;
+      }
 
       li {
         border: 1px solid var(--border);
@@ -95,7 +127,7 @@ main {
         label {
           display: flex;
           gap: 10px;
-          padding: .5rem 0;
+          padding: 0.5rem 0;
           text-wrap: wrap;
           transition-duration: 1s;
 
@@ -136,13 +168,13 @@ main {
       justify-content: space-between;
 
       small {
-        color: var(--text-muted)
+        color: var(--text-muted);
       }
 
       button {
         background-color: var(--button-delete);
         border: none;
-        padding: .3rem;
+        padding: 0.3rem;
         border-radius: 5px;
       }
     }

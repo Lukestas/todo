@@ -1,8 +1,10 @@
-import { useId } from 'react';
-import './App.css';
-import Task from './components/Task';
-import Footer from './components/Footer';
-import useTask from './hooks/useTask';
+import { useId } from 'react'; // react hook useId Import
+import './App.css'; // styles sheet import
+import Footer from './components/Footer'; // Footer component import
+import useTask from './hooks/useTask'; // useTask custom hook import
+import Pagination from './components/Pagination'; // Pagination component import
+import TaskList from './components/TaskList'; // TaskList component import
+import DeleteAllCompletedTasks from './components/DeleteAllCompletedTasks'; // DeleteAllCompletedTasks component import
 
 function App() {
   const searchId = useId(); // useId hook is used to get an unique Id that is not repeated in the project
@@ -11,9 +13,12 @@ function App() {
     tasks,
     changeTaskStatus,
     newSearching,
-    filteredTasks,
+    paginatedPaged,
+    currentPage,
+    totalPages,
     deleteTask,
     deleteCompletedTasks,
+    changeCurrentPage,
   } = useTask(); // useTask is a custom hook; all logic about how tomanipulate the tasks data is there
 
   // handleSearchTask is to get the value in the "searchId" input, then calls a function in useTask to search tasks
@@ -72,22 +77,20 @@ function App() {
             </svg>
           </button>
         </form>
-        <ul>
-          {filteredTasks.map((task, i) => (
-            <Task
-              key={i}
-              task={task}
-              onToggle={changeTaskStatus}
-              onDelete={deleteTask}
-            />
-          ))}
-        </ul>
-        <div>
-          <small>
-            {tasks.filter((task) => !task.completed).length} tareas pendientes
-          </small>
-          <button onClick={deleteCompletedTasks}>Borrar completas</button>
-        </div>
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={changeCurrentPage}
+        />
+        <TaskList
+          tasks={paginatedPaged}
+          onToggle={changeTaskStatus}
+          onDelete={deleteTask}
+        />
+        <DeleteAllCompletedTasks
+          tasks={tasks}
+          onDeleteAllCompleted={deleteCompletedTasks}
+        />
       </section>
       <Footer />
     </main>
