@@ -1,5 +1,4 @@
 import { useId } from 'react'; // react hook useId Import
-import './App.css'; // styles sheet import
 import Footer from './components/Footer'; // Footer component import
 import useTask from './hooks/useTask'; // useTask custom hook import
 import Pagination from './components/Pagination'; // Pagination component import

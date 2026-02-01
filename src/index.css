@@ -10,6 +10,8 @@ body {
   align-items: center;
   background-color: var(--background);
   font-size: 1rem;
+  text-align: center;
+  justify-content: center;
 }
 
 :root {
@@ -184,9 +186,14 @@ main {
     margin-top: 1rem;
     color: var(--text-muted);
     display: flex;
-    a {
-      color: var(--text-primary);
-      text-decoration: none;
+    justify-content: center;
+    p {
+      display: flex;
+      gap: 0.2rem;
+      a {
+        color: var(--text-primary);
+        text-decoration: none;
+      }
     }
   }
 }

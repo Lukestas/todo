@@ -1,4 +1,4 @@
-import type { TaskType } from '../types/Types';
+import type { TaskType } from '../types/Types'; // TaskType interface import
 
 // Props Interface is only receive the tasks to display so many completed tasks exist
 // and the function to delete all completed tasks

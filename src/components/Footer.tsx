@@ -4,13 +4,13 @@ export default function Footer() {
   return (
     <footer>
       <p>
+        GitHub repository:
         <a
-          href='https://github.com/Lukestas'
+          href='https://github.com/Lukestas/todo'
           target='_blank'
         >
-          Lukestas:{' '}
+          Lukestas
         </a>
-        This website is under construction.
       </p>
     </footer>
   );
