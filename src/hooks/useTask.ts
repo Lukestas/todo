@@ -23,8 +23,8 @@ export default function useTask() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }, [tasks]);
 
-  // newSearching is a function that receive a text to change the searching value and for later filter tasks
-  const newSearching = (newSearchTerm: string) => {
+  // setSearchTerm is a function that receive a text to change the searching value and for later filter tasks
+  const setSearchTerm = (newSearchTerm: string) => {
     setSearching(newSearchTerm);
   };
 
@@ -42,8 +42,8 @@ export default function useTask() {
   // totalPages is a mathemattical operation to obtain the number of pages needed
   const totalPages = Math.ceil(filteredTasks.length / totalResultsPerPage);
 
-  // paginatedPaged takes a piece of the task list and sends it to be displayed
-  const paginatedPaged = filteredTasks.slice(
+  // paginatedTasks takes a piece of the task list and sends it to be displayed
+  const paginatedTasks = filteredTasks.slice(
     (currentPage - 1) * totalResultsPerPage,
     currentPage * totalResultsPerPage,
   );
@@ -56,6 +56,7 @@ export default function useTask() {
       return matchId;
     });
     setTasks(newTasks);
+    setCurrentPage(1);
   };
 
   // changeTaskStatus receive an ID
@@ -88,6 +89,7 @@ export default function useTask() {
     };
     setTasks([...tasks, newTask]);
     setSearching('');
+    setCurrentPage(1);
   };
 
   // deleteCompletedTasks is a function that find the completed tasks and
@@ -95,16 +97,17 @@ export default function useTask() {
   const deleteCompletedTasks = () => {
     const newTasks: TaskType[] = tasks.filter((task) => !task.completed);
     setTasks(newTasks);
+    setCurrentPage(1);
   };
 
   // Finally, all functions will be sent for use.
   return {
     addNewTask,
     tasks,
-    paginatedPaged,
+    paginatedTasks,
     currentPage,
     totalPages,
-    newSearching,
+    setSearchTerm,
     changeTaskStatus,
     deleteTask,
     deleteCompletedTasks,

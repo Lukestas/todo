@@ -30,28 +30,35 @@ export default function Pagination({
   // and a list of buttons with the number of pages
   return (
     <nav className='pagination'>
-      <button
-        className={isFirstPage ? 'isFirstOrLastPage' : ''}
-        onClick={handlePrevClick}
-      >
-        &lt;
-      </button>
-      {pages.map((page) => (
-        <button
-          key={page}
-          className={currentPage === page ? 'isActive' : ''}
-          onClick={() => onPageChange(page)}
-        >
-          {page}
-        </button>
-      ))}
-
-      <button
-        className={isLastPage ? 'isFirstOrLastPage' : ''}
-        onClick={handleNextClick}
-      >
-        &gt;
-      </button>
+      {totalPages < 10 && (
+        <>
+          <button
+            className={
+              isFirstPage || totalPages === 0 ? 'isFirstOrLastPage' : ''
+            }
+            onClick={handlePrevClick}
+          >
+            &lt;
+          </button>
+          {pages.map((page) => (
+            <button
+              key={page}
+              className={currentPage === page ? 'isActive' : ''}
+              onClick={() => onPageChange(page)}
+            >
+              {page}
+            </button>
+          ))}
+          <button
+            className={
+              isLastPage || totalPages === 0 ? 'isFirstOrLastPage' : ''
+            }
+            onClick={handleNextClick}
+          >
+            &gt;
+          </button>
+        </>
+      )}
     </nav>
   );
 }

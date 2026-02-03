@@ -11,8 +11,8 @@ function App() {
     addNewTask,
     tasks,
     changeTaskStatus,
-    newSearching,
-    paginatedPaged,
+    setSearchTerm,
+    paginatedTasks,
     currentPage,
     totalPages,
     deleteTask,
@@ -23,7 +23,7 @@ function App() {
   // handleSearchTask is to get the value in the "searchId" input, then calls a function in useTask to search tasks
   const handleSearchTask = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newSearchingTerm = e.target.value;
-    newSearching(newSearchingTerm);
+    setSearchTerm(newSearchingTerm);
   };
 
   // handleAddTask is to get all values in the form tag,
@@ -82,7 +82,7 @@ function App() {
           onPageChange={changeCurrentPage}
         />
         <TaskList
-          tasks={paginatedPaged}
+          tasks={paginatedTasks}
           onToggle={changeTaskStatus}
           onDelete={deleteTask}
         />
