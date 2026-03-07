@@ -1,4 +1,5 @@
-import type { TaskType } from '../types/Types'; // TaskType interface import
+import type { TaskType } from '../../types/Types'; // TaskType interface import
+import styles from './DeleteAllCompletedTasks.module.css';
 
 // Props Interface is only receive the tasks to display so many completed tasks exist
 // and the function to delete all completed tasks
@@ -14,7 +15,7 @@ export default function DeleteAllCompletedTasks({
   // HTML structure, finds which tasks are completed and display them,
   // it also has a button that, when is clicked, deletes all completed tasks
   return (
-    <div>
+    <div className={styles.deleteAllCompletedTasks}>
       <small>
         {tasks.filter((task: TaskType) => !task.completed).length} tareas
         pendientes

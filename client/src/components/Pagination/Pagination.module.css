@@ -1,0 +1,29 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+  button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    padding: 0.5rem;
+    color: var(--text-primary);
+    border-radius: 10px;
+    &:hover {
+      transition-duration: 1s;
+      background-color: var(--button-background);
+    }
+    &.isActive {
+      cursor: default;
+      background-color: var(--button-add);
+    }
+    &.isFirstOrLastPage {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+}

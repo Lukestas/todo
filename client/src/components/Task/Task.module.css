@@ -1,0 +1,44 @@
+.task {
+  border: 1px solid var(--border);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  align-items: center;
+
+  label {
+    display: flex;
+    gap: 10px;
+    padding: 0.5rem 0;
+    text-wrap: wrap;
+    transition-duration: 1s;
+
+    &.isChecked {
+      transition-duration: 1s;
+      text-decoration: line-through;
+      color: var(--text-muted);
+    }
+  }
+
+  button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    svg {
+      color: var(--button-delete);
+      width: 2rem;
+    }
+
+    &.isCompleted {
+      display: inline-block;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.253);
+    }
+  }
+}

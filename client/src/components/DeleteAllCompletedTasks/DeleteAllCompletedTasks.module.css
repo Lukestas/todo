@@ -1,0 +1,17 @@
+.deleteAllCompletedTasks {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  small {
+    color: var(--text-muted);
+  }
+
+  button {
+    background-color: var(--button-delete);
+    border: none;
+    padding: 0.3rem;
+    border-radius: 5px;
+  }
+}

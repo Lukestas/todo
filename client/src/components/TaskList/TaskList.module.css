@@ -1,0 +1,7 @@
+.taskList {
+  background-color: var(--list-background);
+  p {
+    color: var(--text-muted);
+    padding: 1rem;
+  }
+}

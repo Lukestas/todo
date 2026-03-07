@@ -1,0 +1,14 @@
+.footer {
+  margin-top: 1rem;
+  color: var(--text-muted);
+  display: flex;
+  justify-content: center;
+  p {
+    display: flex;
+    gap: 0.2rem;
+    a {
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.tasks {
+  margin-top: 2rem;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0px 2px 15px 0 black;
+  background-color: var(--card-background);
+  h1 {
+    margin-top: 1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+  }
+  form {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem 0 1rem;
+    gap: 10px;
+    input {
+      width: 100%;
+      padding: 1rem;
+      border: none;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--input-background);
+      color: white;
+
+      &::placeholder {
+        color: var(--text-muted);
+      }
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      svg {
+        color: var(--button-add);
+        width: 2rem;
+        height: 2rem;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: var(--button-background);
+        }
+      }
+    }
+  }
+}

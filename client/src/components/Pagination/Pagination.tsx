@@ -1,4 +1,5 @@
-import type { PaginationProps } from '../types/Types'; // PaginationProps Interface import
+import type { PaginationProps } from '../../types/Types'; // PaginationProps Interface import
+import styles from './Pagination.module.css';
 
 export default function Pagination({
   currentPage = 1,
@@ -29,7 +30,7 @@ export default function Pagination({
   // HTML structure, it have a navegation with two button to go to previous and next page
   // and a list of buttons with the number of pages
   return (
-    <nav className='pagination'>
+    <nav className={styles.pagination}>
       {totalPages < 10 && (
         <>
           <button

@@ -1,12 +1,12 @@
-import type { TaskProps } from '../types/Types'; // TaskProps interface import
-
+import type { TaskProps } from '../../types/Types'; // TaskProps interface import
+import styles from './Task.module.css';
 // HTML structure for a task, receive a task and two functions.
 // It is a list item to display task information and manipulate it,
 // such as checking and deleting it
 export default function Task({ task, onToggle, onDelete }: TaskProps) {
   return (
-    <li>
-      <label className={task.completed ? 'isChecked' : ''}>
+    <li className={styles.task}>
+      <label className={task.completed ? styles.isChecked : ''}>
         <input
           type='checkbox'
           checked={task.completed}
@@ -15,7 +15,7 @@ export default function Task({ task, onToggle, onDelete }: TaskProps) {
         {task.name}
       </label>
       <button
-        className={task.completed ? `isCompleted` : ''}
+        className={task.completed ? styles.isCompleted : ''}
         onClick={() => {
           onDelete(task.id);
         }}

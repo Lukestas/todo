@@ -1,0 +1,17 @@
+.login {
+  form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--list-background);
+    padding: 2rem;
+    gap: 1rem;
+    border-radius: 10px;
+    label {
+      input {
+        padding: 1rem;
+        background-color: var(--input-background);
+        border: none;
+      }
+    }
+  }
+}
