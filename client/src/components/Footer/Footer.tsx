@@ -10,7 +10,7 @@ export default function Footer() {
           href='https://github.com/Lukestas/todo'
           target='_blank'
         >
-          Lukestas
+          ToDo
         </a>
       </p>
     </footer>
