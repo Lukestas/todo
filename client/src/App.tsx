@@ -5,6 +5,7 @@ import { lazy } from 'react';
 
 const TasksPage = lazy(() => import('./Pages/Tasks'));
 const LoginPage = lazy(() => import('./Pages/Login'));
+const SignInPage = lazy(() => import('./Pages/SignIn'));
 const NotFoundPage = lazy(() => import('./Pages/NotFound'));
 
 function App() {
@@ -20,7 +21,10 @@ function App() {
           path='/login'
           element={<LoginPage />}
         />
-        {/* <Route path='/register' element={ <Register/>} /> */}
+        <Route 
+          path='/register' 
+          element={ <SignInPage />} 
+        />
         <Route
           path='*'
           element={<NotFoundPage />}
