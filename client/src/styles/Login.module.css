@@ -22,13 +22,15 @@
       }
     }
     button{
+      color: var(--text-primary) ;
       padding: 1rem;
       border-radius: 10px;
       background: none;
       border: 1px solid var(--border);
-      background: var(--button-background);
+      background: var(--button-add);
       &:hover{
-        background: none;
+        transition: 0.2s;
+        background: var(--button-background);
         cursor: pointer;
       }
     }
@@ -41,7 +43,7 @@
     a{
       cursor: pointer;
       text-decoration: dashed;
-      color: var(--text-muted);
+      color: var(--button-add);
     }
   }
 }
