@@ -1,0 +1,50 @@
+.signin{
+    h1{
+        padding: 2rem;
+        border-radius: 10px 10px 0px 0px;
+        color: var(--text-primary);
+        background-color: var(--list-background);
+    }
+    form {
+        background: var(--list-background);
+        div{
+            padding: 1rem 3rem 0rem 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            label{
+                input {
+                    background: var(--input-background);
+                    padding: 1rem 0rem 1rem .5rem;
+                    border-radius: 10px;
+                    border: 1px solid var(--border);
+                    color: var(--text-primary);
+                }
+            }
+        }
+        button{
+           margin: 2rem;
+           border: 1px solid var(--border);
+           border-radius: 10px;
+           padding: 1rem 2rem;
+           background: var(--button-add);
+           color: var(--text-primary);
+
+           &:hover{
+                transition: .2s;
+                background: var(--button-background);
+                cursor: pointer;
+           }
+        }
+        }
+    p {
+        padding: 0rem 3rem .5rem 3rem;
+        background: var(--list-background);
+        border-radius: 0px 0px 10px 10px;
+        color: var(--text-primary);
+        a {
+            text-decoration: none;
+            color: var(--button-add);
+        }
+    }
+}
