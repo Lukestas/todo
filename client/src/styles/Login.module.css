@@ -1,17 +1,47 @@
 .login {
+  h1 {
+    padding-top: 1rem;
+    background-color: var(--list-background);
+    color: var(--text-primary);
+    border-radius: 10px 10px 0px 0px;
+  }
   form {
     display: flex;
     flex-direction: column;
     background-color: var(--list-background);
-    padding: 2rem;
-    gap: 1rem;
-    border-radius: 10px;
+    padding: 2rem 3rem 3rem 3rem;
+    gap: 1.5rem;
     label {
+      
       input {
         padding: 1rem;
         background-color: var(--input-background);
-        border: none;
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+        border-radius: 10px;
       }
+    }
+    button{
+      padding: 1rem;
+      border-radius: 10px;
+      background: none;
+      border: 1px solid var(--border);
+      background: var(--button-background);
+      &:hover{
+        background: none;
+        cursor: pointer;
+      }
+    }
+  }
+  p{
+    padding-bottom: 1rem;
+    background-color: var(--list-background);
+    color: var(--text-primary);
+    border-radius: 0px 0px 10px 10px;
+    a{
+      cursor: pointer;
+      text-decoration: dashed;
+      color: var(--text-muted);
     }
   }
 }
