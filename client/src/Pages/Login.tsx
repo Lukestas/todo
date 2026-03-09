@@ -24,7 +24,7 @@ export default function Login() {
         <button>Iniciar Sesion</button>
       </form>
       <p>¿Aun no tienes usuario?
-        <a href="#"> Registrarse</a>
+        <a href="./register"> Registrarse</a>
       </p>
     </section>
   );
