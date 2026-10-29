@@ -1,0 +1,46 @@
+.Button{
+    background-color: var(--button-background);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+    border-radius: .5rem;
+    padding: .5rem;
+    font-size: 1rem;
+    transition-duration: 200ms;
+    &:hover{
+        background-color: var(--button-add);
+        color: var(--text-primary);
+        cursor: pointer;
+    }
+    &:disabled{
+        color:var(--button-background);
+        background-color: var(--button-background);
+        cursor: default;
+    }
+}
+
+.ButtonSM{
+    padding: .5rem;
+    font-size: .8rem;
+}
+
+.Outline{
+    background-color: transparent;
+    &:hover{
+        background-color: var(--button-background);
+    }
+}
+
+.Cancel{
+    background-color: var(--button-delete);
+    &:hover{
+        background-color: var(--button-background);
+    }
+}
+
+.Cancel{
+    background-color: var(--button-warning);
+    color: var(--text-secondary);
+    &:hover{
+        background-color: var(--button-background);
+    }
+}

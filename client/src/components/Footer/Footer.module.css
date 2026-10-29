@@ -1,6 +1,6 @@
 .footer {
   margin-top: 1rem;
-  color: var(--text-muted);
+  color: var(--text-primary-muted);
   display: flex;
   justify-content: center;
   p {

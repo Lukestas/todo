@@ -5,7 +5,7 @@
   justify-content: space-between;
 
   small {
-    color: var(--text-muted);
+    color: var(--text-primary-muted);
   }
 
   button {

@@ -3,9 +3,10 @@ import Footer from './components/Footer/Footer'; // Footer component import
 import Header from './components/Header/Header'; // Header component import
 import { lazy } from 'react';
 
-const TasksPage = lazy(() => import('./Pages/Tasks'));
-const LoginPage = lazy(() => import('./Pages/Login'));
-const NotFoundPage = lazy(() => import('./Pages/NotFound'));
+const TasksPage = lazy(() => import('./pages/Tasks'));
+const LoginPage = lazy(() => import('./pages/Login'));
+const NotFoundPage = lazy(() => import('./pages/NotFound'));
+const ComponentTest= lazy(()=>import("./components/ui/Button/Button"));
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           path='*'
           element={<NotFoundPage />}
         />
+        <Route path='test' element={<ComponentTest id='A' size='md' title='a' type='button' disabled={false} name='hola' variant='Cancel' text="Agregar"/>} />
       </Routes>
       <Footer />
     </main>
