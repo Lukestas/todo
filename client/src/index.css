@@ -15,17 +15,24 @@ body {
 }
 
 :root {
-  --text-primary: rgb(255, 255, 255);
+  --text-primary: rgb(233, 231, 231);
   --text-primary-muted: rgb(72, 101, 131);
-  --text-secondary: rgb(0, 0, 0);
+  --text-secondary: rgb(12, 12, 12);
   --text-secondary-muted: rgb(77, 76, 76);
   --background: #101922;
   --card-background: #1c2632;
   --border: rgb(50 77 103);
   --list-background: #2a3a49;
-  --button-delete: rgb(235, 99, 89);
+  --button-delete: rgb(238, 66, 54);
   --button-add: #137fec;
-  --button-warning: rgba(238, 222, 131, 0.959);
+  --button-warning: rgba(255, 221, 27, 0.959);
   --input-background: rgb(25 38 51);
   --button-background: rgba(255, 255, 255, 0.253);
+}
+
+.Prueba{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: .2rem
 }

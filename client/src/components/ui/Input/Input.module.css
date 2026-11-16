@@ -1,0 +1,27 @@
+.input {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--text-primary);
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  &:focus {
+    outline-style: groove;
+    outline-color: var(--button-add);
+  }
+  &::placeholder {
+    color: var(--text-primary-muted);
+  }
+  &[type="date"]::-webkit-calendar-picker-indicator,
+  &[type="datetime-local"]::-webkit-calendar-picker-indicator,
+  &[type="time"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert();
+  }
+  &:read-only,
+  &:disabled {
+    color: var(--text-primary);
+    background-color: var(--border);
+  }
+}
